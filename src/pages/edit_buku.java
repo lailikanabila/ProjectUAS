@@ -86,7 +86,7 @@ public class edit_buku extends javax.swing.JDialog {
         body.setBackground(new java.awt.Color(255, 255, 255));
         body.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        header.setBackground(new java.awt.Color(204, 0, 0));
+        header.setBackground(new java.awt.Color(51, 51, 0));
         header.setPreferredSize(new java.awt.Dimension(718, 47));
 
         close_btn.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
@@ -134,7 +134,7 @@ public class edit_buku extends javax.swing.JDialog {
 
         jLabel6.setText("Tanggal Terbit (YYYY-MM-DD)");
 
-        save_btn.setBackground(new java.awt.Color(204, 0, 0));
+        save_btn.setBackground(new java.awt.Color(51, 51, 0));
 
         save.setForeground(new java.awt.Color(255, 255, 255));
         save.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -153,10 +153,10 @@ public class edit_buku extends javax.swing.JDialog {
         );
         save_btnLayout.setVerticalGroup(
             save_btnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(save, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+            .addComponent(save, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
         );
 
-        reset_btn.setBackground(new java.awt.Color(204, 0, 0));
+        reset_btn.setBackground(new java.awt.Color(51, 51, 0));
 
         reset.setForeground(new java.awt.Color(255, 255, 255));
         reset.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -175,7 +175,7 @@ public class edit_buku extends javax.swing.JDialog {
         );
         reset_btnLayout.setVerticalGroup(
             reset_btnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(reset, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+            .addComponent(reset, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout bodyLayout = new javax.swing.GroupLayout(body);

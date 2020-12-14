@@ -277,9 +277,7 @@ public class add_pengembalian extends javax.swing.JDialog {
         );
         save_btnLayout.setVerticalGroup(
             save_btnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, save_btnLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(save, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
+            .addComponent(save, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
         );
 
         jLabel8.setText("Tanggal Pengembalian (YYYY-MM-DD)");
@@ -379,42 +377,40 @@ public class add_pengembalian extends javax.swing.JDialog {
                                 .addGap(65, 65, 65)
                                 .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(bodyLayout.createSequentialGroup()
+                                        .addComponent(tanggal_pengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(95, 95, 95)
                                         .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(bodyLayout.createSequentialGroup()
-                                                .addComponent(tanggal_pengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(95, 95, 95)
+                                                .addComponent(jLabel13)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(lm_pinjam, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btn_lama, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(bodyLayout.createSequentialGroup()
+                                                .addComponent(jLabel12)
+                                                .addGap(35, 35, 35)
                                                 .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(bodyLayout.createSequentialGroup()
-                                                        .addComponent(jLabel13)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(lm_pinjam, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(btn_lama, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(bodyLayout.createSequentialGroup()
-                                                        .addComponent(jLabel12)
-                                                        .addGap(35, 35, 35)
-                                                        .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addComponent(hitung_denda1)
-                                                            .addComponent(denda, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                            .addComponent(jLabel8)
-                                            .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(tanggal_peminjaman1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(pinalti, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(bodyLayout.createSequentialGroup()
-                                        .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(bodyLayout.createSequentialGroup()
-                                                .addComponent(jLabel9)
-                                                .addGap(338, 338, 338)
-                                                .addComponent(save_btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jLabel10))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tgl_pengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                    .addComponent(hitung_denda1)
+                                                    .addComponent(denda, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jLabel8)
+                                    .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(tanggal_peminjaman1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(pinalti, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(bodyLayout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(save_btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(bodyLayout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel10))
+                                .addGap(326, 326, 326)
+                                .addComponent(tgl_pengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, 1030, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -425,52 +421,57 @@ public class add_pengembalian extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bodyLayout.createSequentialGroup()
-                        .addComponent(cari_murid, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(data_murid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(data_buku, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(bodyLayout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24)
                         .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(bodyLayout.createSequentialGroup()
-                                .addGap(24, 24, 24)
                                 .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(bodyLayout.createSequentialGroup()
                                         .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(bodyLayout.createSequentialGroup()
-                                                .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel13)
-                                                    .addComponent(lm_pinjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(btn_lama, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(denda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jLabel12)))
-                                            .addComponent(pinalti, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(hitung_denda1))
-                                    .addGroup(bodyLayout.createSequentialGroup()
-                                        .addComponent(jLabel14)
-                                        .addGap(5, 5, 5)
-                                        .addComponent(tanggal_peminjaman1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel13)
+                                            .addComponent(lm_pinjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btn_lama, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel8)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tanggal_pengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
+                                        .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(denda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel12)))
+                                    .addComponent(pinalti, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(hitung_denda1))
+                            .addGroup(bodyLayout.createSequentialGroup()
+                                .addComponent(jLabel14)
+                                .addGap(5, 5, 5)
+                                .addComponent(tanggal_peminjaman1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tanggal_pengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(bodyLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(tgl_pengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(16, 16, 16))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(bodyLayout.createSequentialGroup()
+                                .addGap(102, 102, 102)
+                                .addComponent(save_btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(bodyLayout.createSequentialGroup()
+                        .addComponent(cari_murid, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(data_murid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(bodyLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(data_buku, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(23, 53, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bodyLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel10)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel11)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9)
-                                    .addComponent(save_btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(23, 40, Short.MAX_VALUE))
+                                .addComponent(jLabel9)
+                                .addGap(84, 84, 84))))))
         );
 
         data_murid.getAccessibleContext().setAccessibleName("Data Siswa");
@@ -646,6 +647,8 @@ public class add_pengembalian extends javax.swing.JDialog {
     
     
     private void tampil_peminjam() {
+        String query = cari_murid.getText();
+        
         Object []baris = {"NIM", "Nama", "Jurusan", "Kode Buku", "Judul Buku", "Tanggal Pinjam"};
         tbl2 = new DefaultTableModel(null, baris) {
             public boolean isCellEditable(int row, int column) {
@@ -656,25 +659,62 @@ public class add_pengembalian extends javax.swing.JDialog {
         
         try {
             Connection con = new database.connection().configDB();
-            String sql = "SELECT * FROM peminjaman ORDER BY id ASC";
-            java.sql.Statement st = con.createStatement();
-            java.sql.ResultSet rs = st.executeQuery(sql);
+            String sql = "SELECT * FROM peminjaman WHERE BINARY "
+                    + "nis LIKE '%"+query+"%' "
+                    + "OR nama LIKE '%"+query+"%' "
+                    + "OR jurusan LIKE '%"+query+"%' "
+                    + "OR kode LIKE '%"+query+"%' "
+                    + "OR judul LIKE '%"+query+"%' "
+                    + "OR tanggal LIKE '%"+query+"%' "
+                    + "ORDER BY id ASC";
+            java.sql.Statement stmt = con.createStatement();
+            java.sql.ResultSet hasil = stmt.executeQuery(sql);
             
-            while (rs.next()) {
-                String nim = rs.getString("nis");
-                String nama = rs.getString("nama");
-                String jurusan = rs.getString("jurusan");
-                String kode_buku = rs.getString("kode");
-                String judul = rs.getString("judul");
-                String tanggal_peminjaman = rs.getString("tanggal");
+            while (hasil.next()) {
+                String nis = hasil.getString("nis");
+                String nama = hasil.getString("nama");
+                String jurusan = hasil.getString("jurusan");
+                String kode = hasil.getString("kode");
+                String judul = hasil.getString("judul");
+                String tanggal = hasil.getString("tanggal");
                 
-                String[] data = {nim, nama, jurusan, kode_buku, judul, tanggal_peminjaman};
+                String[] data = {nis, nama, jurusan, kode, judul, tanggal};
                 tbl2.addRow(data);
             }
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Gagal Menampilkan DATA!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
-            this.setVisible(false);
-        }
+            this.setVisible(false);}
+    
+//        Object []baris = {"NIM", "Nama", "Jurusan", "Kode Buku", "Judul Buku", "Tanggal Pinjam"};
+//        tbl2 = new DefaultTableModel(null, baris) {
+//            public boolean isCellEditable(int row, int column) {
+//                return false;
+//            }
+//        };
+//        tbl_peminjam.setModel(tbl2);
+//        
+//        try {
+//            Connection con = new database.connection().configDB();
+//            String sql = "SELECT * FROM peminjaman ORDER BY id ASC";
+//            java.sql.Statement st = con.createStatement();
+//            java.sql.ResultSet rs = st.executeQuery(sql);
+//            
+//            while (rs.next()) {
+//                String nim = rs.getString("nis");
+//                String nama = rs.getString("nama");
+//                String jurusan = rs.getString("jurusan");
+//                String kode_buku = rs.getString("kode");
+//                String judul = rs.getString("judul");
+//                String tanggal_peminjaman = rs.getString("tanggal");
+//                
+//                String[] data = {nim, nama, jurusan, kode_buku, judul, tanggal_peminjaman};
+//                tbl2.addRow(data);
+//            }
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, "Gagal Menampilkan DATA!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+//            this.setVisible(false);
+//        }
     }
     
        
@@ -703,14 +743,14 @@ public class add_pengembalian extends javax.swing.JDialog {
             java.sql.ResultSet hasil = stmt.executeQuery(sql);
             
             while (hasil.next()) {
-                String nis = hasil.getString("nim");
+                String nim = hasil.getString("nis");
                 String nama = hasil.getString("nama");
                 String jurusan = hasil.getString("jurusan");
                 String kode_buku = hasil.getString("kode");
                 String judul_buku = hasil.getString("judul");
                 String tanggal_peminjaman = hasil.getString("tanggal");
                 
-                String[] data = {nis, nama, jurusan, kode_buku, judul_buku, tanggal_peminjaman};
+                String[] data = {nim, nama, jurusan, kode_buku, judul_buku, tanggal_peminjaman};
                 tbl2.addRow(data);
             }
         } catch (Exception e) {}

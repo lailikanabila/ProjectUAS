@@ -138,7 +138,7 @@ public class add_siswa extends javax.swing.JDialog {
 
         jLabel4.setText("Jurusan");
 
-        jurusan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Teknik Komputer dan Jaringan", "Teknik Kendaraan Ringan Otomotif", "Teknik dan Bisnis Sepeda Motor", "Otomatisasi dan Tata Kelola Perkantoran", "Akuntansi dan Keuangan Lembaga", "Bisnis Daring dan Pemasaran" }));
+        jurusan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Teknik Komputer dan Jaringan", "Teknik Informatika", "Biologi", "Fisika", "Matematika", "Agribisnis", "Teknik Pertambangan" }));
         jurusan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jurusanActionPerformed(evt);

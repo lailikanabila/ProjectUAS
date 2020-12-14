@@ -100,9 +100,6 @@ public class home extends javax.swing.JFrame {
         result_pengembalian = new javax.swing.JLabel();
         tambah4 = new javax.swing.JPanel();
         tambah4_value = new javax.swing.JLabel();
-        ubah4 = new javax.swing.JPanel();
-        hapus4 = new javax.swing.JPanel();
-        hapus4_value = new javax.swing.JLabel();
         segarkan4 = new javax.swing.JPanel();
         segarkan4_value = new javax.swing.JLabel();
         kelolabuku = new javax.swing.JPanel();
@@ -431,42 +428,6 @@ public class home extends javax.swing.JFrame {
             .addComponent(tambah4_value, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
         );
 
-        ubah4.setBackground(new java.awt.Color(51, 51, 0));
-
-        javax.swing.GroupLayout ubah4Layout = new javax.swing.GroupLayout(ubah4);
-        ubah4.setLayout(ubah4Layout);
-        ubah4Layout.setHorizontalGroup(
-            ubah4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 145, Short.MAX_VALUE)
-        );
-        ubah4Layout.setVerticalGroup(
-            ubah4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
-        );
-
-        hapus4.setBackground(new java.awt.Color(51, 51, 0));
-
-        hapus4_value.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        hapus4_value.setForeground(new java.awt.Color(255, 255, 255));
-        hapus4_value.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        hapus4_value.setText("Hapus Data");
-        hapus4_value.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                hapus4_valueMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout hapus4Layout = new javax.swing.GroupLayout(hapus4);
-        hapus4.setLayout(hapus4Layout);
-        hapus4Layout.setHorizontalGroup(
-            hapus4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hapus4_value, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
-        );
-        hapus4Layout.setVerticalGroup(
-            hapus4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hapus4_value, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
-        );
-
         segarkan4.setBackground(new java.awt.Color(51, 51, 0));
 
         segarkan4_value.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -504,10 +465,6 @@ public class home extends javax.swing.JFrame {
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 983, Short.MAX_VALUE)
                     .addGroup(pengembalianLayout.createSequentialGroup()
                         .addComponent(tambah4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ubah4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(hapus4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(segarkan4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -524,8 +481,6 @@ public class home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pengembalianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tambah4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ubah4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hapus4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(segarkan4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -1233,10 +1188,6 @@ public class home extends javax.swing.JFrame {
         tampil_pengembalian();
     }//GEN-LAST:event_segarkan4_valueMouseClicked
 
-    private void hapus4_valueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hapus4_valueMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_hapus4_valueMouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -1672,8 +1623,6 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel hapus2_value;
     private javax.swing.JPanel hapus3;
     private javax.swing.JLabel hapus3_value;
-    private javax.swing.JPanel hapus4;
-    private javax.swing.JLabel hapus4_value;
     private javax.swing.JPanel header;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -1726,7 +1675,6 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel ubah2_value;
     private javax.swing.JPanel ubah3;
     private javax.swing.JLabel ubah3_value;
-    private javax.swing.JPanel ubah4;
     private javax.swing.JPanel userinfo;
     // End of variables declaration//GEN-END:variables
 }

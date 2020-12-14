@@ -200,13 +200,14 @@
         <Component class="javax.swing.JComboBox" name="jurusan">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="6">
+              <StringArray count="7">
                 <StringItem index="0" value="Teknik Komputer dan Jaringan"/>
-                <StringItem index="1" value="Teknik Kendaraan Ringan Otomotif"/>
-                <StringItem index="2" value="Teknik dan Bisnis Sepeda Motor"/>
-                <StringItem index="3" value="Otomatisasi dan Tata Kelola Perkantoran"/>
-                <StringItem index="4" value="Akuntansi dan Keuangan Lembaga"/>
-                <StringItem index="5" value="Bisnis Daring dan Pemasaran"/>
+                <StringItem index="1" value="Teknik Informatika"/>
+                <StringItem index="2" value="Biologi"/>
+                <StringItem index="3" value="Fisika"/>
+                <StringItem index="4" value="Matematika"/>
+                <StringItem index="5" value="Agribisnis"/>
+                <StringItem index="6" value="Teknik Pertambangan"/>
               </StringArray>
             </Property>
           </Properties>
