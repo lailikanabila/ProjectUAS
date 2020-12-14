@@ -67,7 +67,7 @@ public class about extends javax.swing.JDialog {
         body.setBackground(new java.awt.Color(255, 255, 255));
         body.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        header.setBackground(new java.awt.Color(204, 0, 0));
+        header.setBackground(new java.awt.Color(102, 102, 0));
         header.setPreferredSize(new java.awt.Dimension(718, 47));
 
         close_btn.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
@@ -100,16 +100,16 @@ public class about extends javax.swing.JDialog {
         );
 
         title.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        title.setText("Tugas Akhir Pemrograman Dasar");
+        title.setText("Tugas Akhir Pemodelan dan Simulasi");
 
         subtitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        subtitle.setText("X TKJ 2 - ACP");
+        subtitle.setText("Kelas 5-E");
 
         desc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         desc.setText("Dibuat Oleh:");
 
         kelompok.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Azriel Gilang P.", "Hamdan Ainur R.", "Jahfal Muhammad R.", "Suluh Sulistiawan" };
+            String[] strings = { "   Risya Diany Yulinska (11180910000118)", "   Nabila Lailika Amalia (11180910000128) ", "   Wahyu Saputra (11180910000135)" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });

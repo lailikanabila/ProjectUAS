@@ -288,7 +288,7 @@ public class home extends javax.swing.JFrame {
             .addComponent(hapus1_value, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
         );
 
-        segarkan1.setBackground(new java.awt.Color(204, 0, 0));
+        segarkan1.setBackground(new java.awt.Color(51, 51, 0));
 
         segarkan1_value.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         segarkan1_value.setForeground(new java.awt.Color(255, 255, 255));
@@ -308,7 +308,7 @@ public class home extends javax.swing.JFrame {
         );
         segarkan1Layout.setVerticalGroup(
             segarkan1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(segarkan1_value, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+            .addComponent(segarkan1_value, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout peminjamanLayout = new javax.swing.GroupLayout(peminjaman);
@@ -459,7 +459,7 @@ public class home extends javax.swing.JFrame {
             .addComponent(hapus2_value, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
         );
 
-        segarkan2.setBackground(new java.awt.Color(204, 0, 0));
+        segarkan2.setBackground(new java.awt.Color(51, 51, 0));
 
         segarkan2_value.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         segarkan2_value.setForeground(new java.awt.Color(255, 255, 255));
@@ -479,7 +479,7 @@ public class home extends javax.swing.JFrame {
         );
         segarkan2Layout.setVerticalGroup(
             segarkan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(segarkan2_value, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+            .addComponent(segarkan2_value, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout kelolabukuLayout = new javax.swing.GroupLayout(kelolabuku);
@@ -545,7 +545,7 @@ public class home extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "NIS", "Nama Lengkap", "Tempat Lahir", "Tanggal Lahir", "Jurusan", "Tanggal Terdaftar"
+                "NIM", "Nama Lengkap", "Tempat Lahir", "Tanggal Lahir", "Jurusan", "Tanggal Terdaftar"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -727,7 +727,7 @@ public class home extends javax.swing.JFrame {
         copyright.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         copyright.setForeground(new java.awt.Color(255, 255, 255));
         copyright.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        copyright.setText("© year Tugas Akhir. All Right Reserved.");
+        copyright.setText("© year Perpustakaan.");
 
         javax.swing.GroupLayout footerLayout = new javax.swing.GroupLayout(footer);
         footer.setLayout(footerLayout);
@@ -1111,11 +1111,11 @@ public class home extends javax.swing.JFrame {
     private void copyright() {
         java.util.Date sekarang = new java.util.Date();
         java.text.SimpleDateFormat kal = new java.text.SimpleDateFormat("yyyy") ;
-        copyright.setText("© "+kal.format(sekarang)+" Tugas Akhir. All Right Reserved.");
+        copyright.setText("© "+kal.format(sekarang)+" Perpustakaan.");
     }
     
     private void tampil_peminjaman() {
-        Object []baris = {"NIS", "Nama", "Jurusan", "Kode Buku", "Judul Buku", "Tanggal Peminjaman"};
+        Object []baris = {"NIM", "Nama", "Jurusan", "Kode Buku", "Judul Buku", "Tanggal Peminjaman"};
         tbl1 = new DefaultTableModel(null, baris) {
             public boolean isCellEditable(int row, int column) {
                 return false;
@@ -1192,7 +1192,7 @@ public class home extends javax.swing.JFrame {
     }
     
     private void tampil_siswa() {
-        Object []baris = {"NIS", "Nama Lengkap", "Tempat Lahir", "Tanggal Lahir", "Jurusan", "Tanggal Masuk"};
+        Object []baris = {"NIM", "Nama Lengkap", "Tempat Lahir", "Tanggal Lahir", "Jurusan", "Tanggal Masuk"};
         tbl3 = new DefaultTableModel(null, baris) {
             public boolean isCellEditable(int row, int column) {
                 return false;
@@ -1229,7 +1229,7 @@ public class home extends javax.swing.JFrame {
     private void search_peminjaman() {
         String query = search_peminjaman.getText();
         
-        Object []baris = {"NIS", "Nama", "Jurusan", "Kode Buku", "Judul Buku", "Tanggal Peminjaman"};
+        Object []baris = {"NIM", "Nama", "Jurusan", "Kode Buku", "Judul Buku", "Tanggal Peminjaman"};
         tbl1 = new DefaultTableModel(null, baris) {
             public boolean isCellEditable(int row, int column) {
                 return false;
@@ -1328,7 +1328,7 @@ public class home extends javax.swing.JFrame {
     private void search_siswa() {
         String query = search_siswa.getText();
         
-        Object []baris = {"NIS", "Nama Lengkap", "Tempat Lahir", "Tanggal Lahir", "Jurusan", "Tanggal Masuk"};
+        Object []baris = {"NIM", "Nama Lengkap", "Tempat Lahir", "Tanggal Lahir", "Jurusan", "Tanggal Masuk"};
         tbl3 = new DefaultTableModel(null, baris) {
             public boolean isCellEditable(int row, int column) {
                 return false;
