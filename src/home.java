@@ -35,6 +35,11 @@ public class home extends javax.swing.JFrame {
             return false;
         }
     };
+    DefaultTableModel tbl4 = new DefaultTableModel() {
+        public boolean isCellEditable(int row, int column) {
+            return false;
+        }
+    };
 
     /**
      * Creates new form home
@@ -54,6 +59,7 @@ public class home extends javax.swing.JFrame {
         copyright();
         
         tampil_peminjaman();
+        tampil_pengembalian();
         tampil_buku();
         tampil_siswa();
     }
@@ -95,7 +101,6 @@ public class home extends javax.swing.JFrame {
         tambah4 = new javax.swing.JPanel();
         tambah4_value = new javax.swing.JLabel();
         ubah4 = new javax.swing.JPanel();
-        ubah4_value = new javax.swing.JLabel();
         hapus4 = new javax.swing.JPanel();
         hapus4_value = new javax.swing.JLabel();
         segarkan4 = new javax.swing.JPanel();
@@ -428,25 +433,15 @@ public class home extends javax.swing.JFrame {
 
         ubah4.setBackground(new java.awt.Color(51, 51, 0));
 
-        ubah4_value.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        ubah4_value.setForeground(new java.awt.Color(255, 255, 255));
-        ubah4_value.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ubah4_value.setText("Ubah Data");
-        ubah4_value.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ubah4_valueMouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout ubah4Layout = new javax.swing.GroupLayout(ubah4);
         ubah4.setLayout(ubah4Layout);
         ubah4Layout.setHorizontalGroup(
             ubah4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ubah4_value, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+            .addGap(0, 145, Short.MAX_VALUE)
         );
         ubah4Layout.setVerticalGroup(
             ubah4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ubah4_value, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+            .addGap(0, 36, Short.MAX_VALUE)
         );
 
         hapus4.setBackground(new java.awt.Color(51, 51, 0));
@@ -1216,27 +1211,31 @@ public class home extends javax.swing.JFrame {
 
     private void search_pengembalianKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_pengembalianKeyPressed
         // TODO add your handling code here:
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            search_pengembalian();
+        }
     }//GEN-LAST:event_search_pengembalianKeyPressed
 
     private void search_pengembalianKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_pengembalianKeyTyped
         // TODO add your handling code here:
+        search_pengembalian();
     }//GEN-LAST:event_search_pengembalianKeyTyped
 
     private void tambah4_valueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tambah4_valueMouseClicked
         // TODO add your handling code here:
+        new pages.add_pengembalian(this, rootPaneCheckingEnabled).setVisible(true);
     }//GEN-LAST:event_tambah4_valueMouseClicked
 
-    private void ubah4_valueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ubah4_valueMouseClicked
+    private void segarkan4_valueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_segarkan4_valueMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_ubah4_valueMouseClicked
+        search_pengembalian.setText("");
+        result_pengembalian.setText("");
+        tampil_pengembalian();
+    }//GEN-LAST:event_segarkan4_valueMouseClicked
 
     private void hapus4_valueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hapus4_valueMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_hapus4_valueMouseClicked
-
-    private void segarkan4_valueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_segarkan4_valueMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_segarkan4_valueMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1433,6 +1432,41 @@ public class home extends javax.swing.JFrame {
         } 
     }
     
+    private void tampil_pengembalian(){
+        Object []baris = {"NIM", "Nama", "Jurusan", "Kode Buku", "Judul Buku", "Tanggal Peminjaman", "Tanggal Pengembalian", "Keterlambatan(hari)", "Denda (Rp)"};
+        tbl4 = new DefaultTableModel(null, baris) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+        tb_pengembalian.setModel(tbl4);
+        try {
+            Connection con = new database.connection().configDB();
+            String sql = "SELECT * FROM pengembalian ORDER BY id ASC";
+            java.sql.Statement stat = con.createStatement();
+            java.sql.ResultSet hasil = stat.executeQuery(sql);
+            
+            while (hasil.next()) {
+                String nim = hasil.getString("nim");
+                String nama = hasil.getString("nama");
+                String jurusan = hasil.getString("jurusan");
+                String kode = hasil.getString("kode");
+                String judul = hasil.getString("judul");
+                String tanggal_peminjaman = hasil.getString("tanggal_peminjaman");
+                String tanggal_pengembalian = hasil.getString("tanggal_pengembalian");
+                String pinalti= hasil.getString("pinalti");
+                String denda = hasil.getString("denda");
+                
+                String[] data = {nim, nama, jurusan, kode, judul, tanggal_peminjaman, tanggal_pengembalian, pinalti, denda};
+                tbl4.addRow(data);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Gagal Menampilkan Data!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+            System.exit(0);
+            dispose();
+        }
+    }
     private void search_peminjaman() {
         String query = search_peminjaman.getText();
         
@@ -1575,6 +1609,56 @@ public class home extends javax.swing.JFrame {
             }
         } catch (Exception e) {}
     }
+    
+    private void search_pengembalian() {
+        String query = search_pengembalian.getText();
+        
+        Object []baris = {"NIM", "Nama", "Jurusan", "Kode Buku", "Judul Buku", "Tanggal Peminjaman", "Tanggal Pengembalian", "Keterlambatan(hari)", "Denda (Rp)"};
+        tbl4 = new DefaultTableModel(null, baris) {
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+        tb_pengembalian.setModel(tbl4);
+        
+        try {
+            Connection con = new database.connection().configDB();
+            String sql = "SELECT * FROM pengembalian WHERE BINARY "
+                    + "nim LIKE '%"+query+"%' "
+                    + "OR nama LIKE '%"+query+"%' "
+                    + "OR jurusan LIKE '%"+query+"%' "
+                    + "OR kode LIKE '%"+query+"%' "
+                    + "OR judul LIKE '%"+query+"%' "
+                    + "OR tanggal_peminjaman LIKE '%"+query+"%' "
+                    + "OR tanggal_pengembalian LIKE '%"+query+"%' "
+                    + "OR pinalti LIKE '%"+query+"%' "
+                    + "OR denda LIKE '%"+query+"%' "
+                    + "ORDER BY id ASC";
+            java.sql.Statement stmt = con.createStatement();
+            java.sql.ResultSet hasil = stmt.executeQuery(sql);
+            
+            while (hasil.next()) {
+                String nim = hasil.getString("nim");
+                String nama = hasil.getString("nama");
+                String jurusan = hasil.getString("jurusan");
+                String kode = hasil.getString("kode");
+                String judul = hasil.getString("judul");
+                String tanggal_peminjaman = hasil.getString("tanggal_peminjaman");
+                String tanggal_pengembalian = hasil.getString("tanggal_pengembalian");
+                String pinalti = hasil.getString("pinalti");
+                String denda = hasil.getString("denda");
+                
+                String[] data = {nim, nama, jurusan, kode, judul, tanggal_peminjaman, tanggal_pengembalian, pinalti, denda};
+                tbl4.addRow(data);
+            }
+            
+            if (!query.equals("")) {
+                result_pengembalian.setText("Hasil pencarian dari: '"+query+"'");
+            } else {
+                result_pengembalian.setText("");
+            }
+        } catch (Exception e) {}
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel about;
@@ -1643,7 +1727,6 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JPanel ubah3;
     private javax.swing.JLabel ubah3_value;
     private javax.swing.JPanel ubah4;
-    private javax.swing.JLabel ubah4_value;
     private javax.swing.JPanel userinfo;
     // End of variables declaration//GEN-END:variables
 }
