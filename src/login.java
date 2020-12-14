@@ -78,11 +78,11 @@ public class login extends javax.swing.JFrame {
         body.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         body.setForeground(new java.awt.Color(255, 255, 255));
 
-        header.setBackground(new java.awt.Color(204, 0, 0));
+        header.setBackground(new java.awt.Color(51, 51, 0));
 
         title.setFont(new java.awt.Font("Back to Black Demo", 0, 24)); // NOI18N
         title.setForeground(new java.awt.Color(255, 255, 255));
-        title.setText(" tugasakhir");
+        title.setText("Perpustakaan");
         title.setToolTipText("TUGAS AKHIR");
 
         close_btn.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
@@ -112,12 +112,12 @@ public class login extends javax.swing.JFrame {
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(headerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(132, 132, 132)
+                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(90, 90, 90)
                 .addComponent(thisday)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(timenow)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
                 .addComponent(close_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -134,8 +134,8 @@ public class login extends javax.swing.JFrame {
         label1.setText("Masuk ke");
 
         label2.setFont(new java.awt.Font("Tahoma", 1, 28)); // NOI18N
-        label2.setForeground(new java.awt.Color(204, 0, 0));
-        label2.setText("TUKHIR");
+        label2.setForeground(new java.awt.Color(51, 51, 0));
+        label2.setText("Management Perpustakaan");
 
         username.setToolTipText("masukkan nama pengguna kamu");
         username.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -151,7 +151,7 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        button.setBackground(new java.awt.Color(204, 0, 0));
+        button.setBackground(new java.awt.Color(51, 51, 0));
 
         submit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         submit.setForeground(new java.awt.Color(255, 255, 255));
@@ -181,30 +181,32 @@ public class login extends javax.swing.JFrame {
             bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(bodyLayout.createSequentialGroup()
-                .addGap(202, 202, 202)
                 .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bodyLayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
+                        .addGap(202, 202, 202)
+                        .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(password, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(username, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(bodyLayout.createSequentialGroup()
+                                .addGap(64, 64, 64)
+                                .addComponent(button, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(bodyLayout.createSequentialGroup()
+                        .addGap(136, 136, 136)
                         .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(label1)
-                            .addComponent(label2)))
-                    .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(password, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(username, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(bodyLayout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(button, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(label2))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         bodyLayout.setVerticalGroup(
             bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bodyLayout.createSequentialGroup()
                 .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(98, 98, 98)
+                .addGap(86, 86, 86)
                 .addGroup(bodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(label1)
                     .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)

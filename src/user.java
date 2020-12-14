@@ -60,7 +60,7 @@ public class user extends javax.swing.JDialog {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        header2.setBackground(new java.awt.Color(204, 0, 0));
+        header2.setBackground(new java.awt.Color(51, 51, 0));
         header2.setPreferredSize(new java.awt.Dimension(718, 47));
 
         close_btn2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
@@ -96,7 +96,7 @@ public class user extends javax.swing.JDialog {
 
         jLabel2.setText("Kata Sandi");
 
-        esbtn.setBackground(new java.awt.Color(204, 0, 0));
+        esbtn.setBackground(new java.awt.Color(51, 51, 0));
 
         edit_save.setForeground(new java.awt.Color(255, 255, 255));
         edit_save.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -115,7 +115,7 @@ public class user extends javax.swing.JDialog {
         );
         esbtnLayout.setVerticalGroup(
             esbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(edit_save, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+            .addComponent(edit_save, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -288,13 +288,9 @@ public class user extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel close_btn;
-    private javax.swing.JLabel close_btn1;
     private javax.swing.JLabel close_btn2;
     private javax.swing.JLabel edit_save;
     private javax.swing.JPanel esbtn;
-    private javax.swing.JPanel header;
-    private javax.swing.JPanel header1;
     private javax.swing.JPanel header2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
