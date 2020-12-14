@@ -87,6 +87,19 @@ public class home extends javax.swing.JFrame {
         hapus1_value = new javax.swing.JLabel();
         segarkan1 = new javax.swing.JPanel();
         segarkan1_value = new javax.swing.JLabel();
+        pengembalian = new javax.swing.JPanel();
+        search_pengembalian = new placeholder.search();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tb_pengembalian = new javax.swing.JTable();
+        result_pengembalian = new javax.swing.JLabel();
+        tambah4 = new javax.swing.JPanel();
+        tambah4_value = new javax.swing.JLabel();
+        ubah4 = new javax.swing.JPanel();
+        ubah4_value = new javax.swing.JLabel();
+        hapus4 = new javax.swing.JPanel();
+        hapus4_value = new javax.swing.JLabel();
+        segarkan4 = new javax.swing.JPanel();
+        segarkan4_value = new javax.swing.JLabel();
         kelolabuku = new javax.swing.JPanel();
         search_buku = new placeholder.search();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -353,6 +366,176 @@ public class home extends javax.swing.JFrame {
 
         tab.addTab("Peminjaman", null, peminjaman, "Peminjaman");
         peminjaman.getAccessibleContext().setAccessibleName("Peminjaman");
+
+        pengembalian.setBackground(new java.awt.Color(255, 255, 255));
+
+        search_pengembalian.setToolTipText("Cari Data");
+        search_pengembalian.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                search_pengembalianKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                search_pengembalianKeyTyped(evt);
+            }
+        });
+
+        tb_pengembalian.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "NIM", "Nama", "Jurusan", "Kode Buku", "Judul Buku", "Tanggal Peminjaman", "Tanggal Pengembalian", "Keterlambat (hari)", "Denda"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(tb_pengembalian);
+
+        result_pengembalian.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        result_pengembalian.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+
+        tambah4.setBackground(new java.awt.Color(51, 51, 0));
+
+        tambah4_value.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tambah4_value.setForeground(new java.awt.Color(255, 255, 255));
+        tambah4_value.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tambah4_value.setText("Tambah Data");
+        tambah4_value.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tambah4_valueMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout tambah4Layout = new javax.swing.GroupLayout(tambah4);
+        tambah4.setLayout(tambah4Layout);
+        tambah4Layout.setHorizontalGroup(
+            tambah4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tambah4_value, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+        );
+        tambah4Layout.setVerticalGroup(
+            tambah4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tambah4_value, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        ubah4.setBackground(new java.awt.Color(51, 51, 0));
+
+        ubah4_value.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        ubah4_value.setForeground(new java.awt.Color(255, 255, 255));
+        ubah4_value.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ubah4_value.setText("Ubah Data");
+        ubah4_value.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ubah4_valueMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ubah4Layout = new javax.swing.GroupLayout(ubah4);
+        ubah4.setLayout(ubah4Layout);
+        ubah4Layout.setHorizontalGroup(
+            ubah4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ubah4_value, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+        );
+        ubah4Layout.setVerticalGroup(
+            ubah4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ubah4_value, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        hapus4.setBackground(new java.awt.Color(51, 51, 0));
+
+        hapus4_value.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        hapus4_value.setForeground(new java.awt.Color(255, 255, 255));
+        hapus4_value.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        hapus4_value.setText("Hapus Data");
+        hapus4_value.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                hapus4_valueMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout hapus4Layout = new javax.swing.GroupLayout(hapus4);
+        hapus4.setLayout(hapus4Layout);
+        hapus4Layout.setHorizontalGroup(
+            hapus4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hapus4_value, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+        );
+        hapus4Layout.setVerticalGroup(
+            hapus4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hapus4_value, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        segarkan4.setBackground(new java.awt.Color(51, 51, 0));
+
+        segarkan4_value.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        segarkan4_value.setForeground(new java.awt.Color(255, 255, 255));
+        segarkan4_value.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        segarkan4_value.setText("Segarkan Tabel");
+        segarkan4_value.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                segarkan4_valueMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout segarkan4Layout = new javax.swing.GroupLayout(segarkan4);
+        segarkan4.setLayout(segarkan4Layout);
+        segarkan4Layout.setHorizontalGroup(
+            segarkan4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(segarkan4_value, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+        );
+        segarkan4Layout.setVerticalGroup(
+            segarkan4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(segarkan4_value, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout pengembalianLayout = new javax.swing.GroupLayout(pengembalian);
+        pengembalian.setLayout(pengembalianLayout);
+        pengembalianLayout.setHorizontalGroup(
+            pengembalianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pengembalianLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pengembalianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pengembalianLayout.createSequentialGroup()
+                        .addComponent(result_pengembalian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(search_pengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 983, Short.MAX_VALUE)
+                    .addGroup(pengembalianLayout.createSequentialGroup()
+                        .addComponent(tambah4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ubah4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(hapus4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(segarkan4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        pengembalianLayout.setVerticalGroup(
+            pengembalianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pengembalianLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pengembalianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(search_pengembalian, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+                    .addComponent(result_pengembalian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pengembalianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tambah4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ubah4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hapus4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(segarkan4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        tab.addTab("Pengembalian", null, pengembalian, "Kelola Buku");
 
         kelolabuku.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1031,6 +1214,30 @@ public class home extends javax.swing.JFrame {
         new user(this, rootPaneCheckingEnabled).setVisible(true);
     }//GEN-LAST:event_userinfoComponentShown
 
+    private void search_pengembalianKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_pengembalianKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_search_pengembalianKeyPressed
+
+    private void search_pengembalianKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_search_pengembalianKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_search_pengembalianKeyTyped
+
+    private void tambah4_valueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tambah4_valueMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tambah4_valueMouseClicked
+
+    private void ubah4_valueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ubah4_valueMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ubah4_valueMouseClicked
+
+    private void hapus4_valueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hapus4_valueMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hapus4_valueMouseClicked
+
+    private void segarkan4_valueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_segarkan4_valueMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_segarkan4_valueMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1381,18 +1588,28 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel hapus2_value;
     private javax.swing.JPanel hapus3;
     private javax.swing.JLabel hapus3_value;
+    private javax.swing.JPanel hapus4;
+    private javax.swing.JLabel hapus4_value;
     private javax.swing.JPanel header;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JPanel kelolabuku;
     private javax.swing.JPanel kelolasiswa;
     private javax.swing.JPanel peminjaman;
+    private javax.swing.JPanel peminjaman1;
+    private javax.swing.JPanel peminjaman2;
+    private javax.swing.JPanel pengembalian;
     private javax.swing.JLabel result_buku;
     private javax.swing.JLabel result_peminjaman;
+    private javax.swing.JLabel result_pengembalian;
     private javax.swing.JLabel result_siswa;
     private javax.swing.JTextField search_buku;
     private javax.swing.JTextField search_peminjaman;
+    private javax.swing.JTextField search_peminjaman1;
+    private javax.swing.JTextField search_peminjaman2;
+    private javax.swing.JTextField search_pengembalian;
     private javax.swing.JTextField search_siswa;
     private javax.swing.JPanel segarkan1;
     private javax.swing.JLabel segarkan1_value;
@@ -1400,15 +1617,22 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel segarkan2_value;
     private javax.swing.JPanel segarkan3;
     private javax.swing.JLabel segarkan3_value;
+    private javax.swing.JPanel segarkan4;
+    private javax.swing.JLabel segarkan4_value;
     private javax.swing.JTabbedPane tab;
+    private javax.swing.JTabbedPane tab1;
+    private javax.swing.JTabbedPane tab2;
     private javax.swing.JPanel tambah1;
     private javax.swing.JLabel tambah1_value;
     private javax.swing.JPanel tambah2;
     private javax.swing.JLabel tambah2_value;
     private javax.swing.JPanel tambah3;
     private javax.swing.JLabel tambah3_value;
+    private javax.swing.JPanel tambah4;
+    private javax.swing.JLabel tambah4_value;
     private javax.swing.JTable tb_buku;
     private javax.swing.JTable tb_peminjaman;
+    private javax.swing.JTable tb_pengembalian;
     private javax.swing.JTable tb_siswa;
     private javax.swing.JLabel timenow;
     private javax.swing.JLabel title;
@@ -1418,6 +1642,8 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel ubah2_value;
     private javax.swing.JPanel ubah3;
     private javax.swing.JLabel ubah3_value;
+    private javax.swing.JPanel ubah4;
+    private javax.swing.JLabel ubah4_value;
     private javax.swing.JPanel userinfo;
     // End of variables declaration//GEN-END:variables
 }
